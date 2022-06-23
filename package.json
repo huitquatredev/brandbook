@@ -1,7 +1,6 @@
 {
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "tailwindcss-neumorphism": "^0.1.0"
+    "@11ty/eleventy": "^0.12.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.1",
