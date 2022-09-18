@@ -11,6 +11,19 @@ module.exports = function(eleventyConfig) {
     return format(date, dateFormat)
   })
 
+  eleventyConfig.addGlobalData('generated', () => {
+    let now = new Date();
+    return new Intl.DateTimeFormat("fr",  
+    {
+      hour12: false,
+      hour: "2-digit",
+      minute: "2-digit",
+      day:"2-digit",
+      month:"2-digit",
+      year:"2-digit"
+    }).format(now);
+  });
+
   return {
     dir: {
       input: "src",
