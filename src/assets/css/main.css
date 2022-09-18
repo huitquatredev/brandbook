@@ -8,3 +8,46 @@
   }
 }
 
+body{
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+#h, #q {
+  animation-delay: 2s;
+  animation-name: color_sine_inv;
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+#rect1, #rect2, #rect3, #rect4 {
+  animation-delay: 2s;
+  animation-name: color_sine;
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes color_sine {
+  0% {
+    fill:#000;
+  }
+  50% {
+    fill: #000;
+  }
+  100% {
+    fill: #FFF;
+  }
+}
+
+@keyframes color_sine_inv {
+  0% {
+    fill:#FFF;
+  }
+  50% {
+    fill: #FFF;
+  }
+  100% {
+    fill: #000;
+  }
+}
