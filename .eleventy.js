@@ -1,4 +1,16 @@
 const format = require('date-fns/format');
+const fs = require('fs');
+
+let getSvgContent = function (file,id) {
+  let relativeFilePath = `./src/assets/images/${file}.svg`;
+  let data = fs.readFileSync(relativeFilePath, 
+  function(err, contents) {
+     if (err) return err
+     return contents
+  });
+
+  return data.toString('utf8').replace('toInject',id);
+}
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/images");
@@ -9,7 +21,9 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter('date', function (date, dateFormat) {
     return format(date, dateFormat)
-  })
+  });
+
+  eleventyConfig.addShortcode("svg", getSvgContent);
 
   eleventyConfig.addGlobalData('generated', () => {
     let now = new Date();
