@@ -12,48 +12,26 @@ body{
   font-family: 'Libre Franklin', sans-serif;
 }
 
-#h, #q {
-  animation-delay: 2s;
-  animation-name: color_sine_inv;
-  animation-duration: 4s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
+#noir .rect--big{
+  fill: hsl(0 0% 75%);
 }
 
-#rect1, #rect2, #rect3, #rect4 {
-  animation-delay: 2s;
-  animation-name: color_sine;
-  animation-duration: 4s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
+#noir .rect--top{
+  fill: hsl(0 0% 60%);
 }
 
-@keyframes color_sine {
-  0% {
-    fill:#000;
-  }
-  49% {
-    fill: #000;
-  }
-  50%{
-    fill: #FFF;
-  }
-  100% {
-    fill: #FFF;
-  }
+#noir .rect--bot,#noir .logotext{
+  fill: hsl(0 0% 97%);
 }
 
-@keyframes color_sine_inv {
-  0% {
-    fill:#FFF;
-  }
-  49% {
-    fill: #FFF;
-  }
-  50%{
-    fill:#000;
-  }
-  100% {
-    fill: #000;
-  }
+#blanc .rect--big{
+  fill: hsl(0 0% 40%);
+}
+
+#blanc .rect--top{
+  fill: hsl(0 0% 60%);
+}
+
+#blanc .rect--bot,#blanc .logotext{
+  fill: hsl(0 0% 15%);
 }
