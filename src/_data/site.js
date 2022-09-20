@@ -2,6 +2,6 @@
 
 module.exports = function () {
   return {
-    url: 'https://musing-minsky-ca9471.netlify.app/'
+    url: 'https://legendary-queijadas-6c5141.netlify.app'
   }
 }

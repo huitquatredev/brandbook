@@ -8,30 +8,68 @@
   }
 }
 
+:root{
+  --color-darktone: hsl(0 0% 15%);
+  --color-pantone: hsl(0 0% 40%);
+  --color-lightone: hsl(0 0% 60%);
+
+  --color-lghtgrey1: hsl(0 0% 97%);
+  --color-lghtgrey2: hsl(0 0% 75%);
+  --color-lghtgrey3: hsl(0 0% 60%);
+
+  --color-darkgrey1: hsl(0 0% 15%);
+  --color-darkgrey2: hsl(0 0% 40%);
+  --color-darkgrey3: hsl(0 0% 60%);
+}
+
 body{
   font-family: 'Libre Franklin', sans-serif;
 }
 
-#noir .rect--big{
-  fill: hsl(0 0% 75%);
+#wrapper{
+  @apply bg-lghtgrey1 dark:bg-darktone text-darktone dark:text-lghtgrey1;
 }
 
-#noir .rect--top{
-  fill: hsl(0 0% 60%);
+#pantone-color-year::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--color-pantone);
+  cursor: pointer;
 }
 
-#noir .rect--bot,#noir .logotext{
-  fill: hsl(0 0% 97%);
+#pantone-color-year::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: var(--color-pantone);
+  cursor: pointer;
 }
 
+.bg-light{
+  background-color: var(--color-lghtgrey1);
+}
+.bg-dark{
+  background-color: var(--color-darktone);
+}
 #blanc .rect--big{
-  fill: hsl(0 0% 40%);
+  fill: var(--color-pantone);
 }
-
 #blanc .rect--top{
-  fill: hsl(0 0% 60%);
+  fill: var(--color-lightone);
+}
+#blanc .rect--bot,#blanc .logotext{
+  fill: var(--color-darktone);
+}
+#noir .rect--big{
+  fill: var(--color-lghtgrey2);
+}
+#noir .rect--top{
+  fill: var(--color-lghtgrey3);
+}
+#noir .rect--bot,#noir .logotext{
+  fill: var(--color-lghtgrey1);
 }
 
-#blanc .rect--bot,#blanc .logotext{
-  fill: hsl(0 0% 15%);
-}
+

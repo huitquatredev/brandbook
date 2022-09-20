@@ -18,11 +18,13 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;300;500;700;900&display=swap" />
     </noscript>
   </head>
-  <body class="dark">
+  <body class="">
     <div id="wrapper">
+      {% include '_nav.njk' %}
       <main>
         {{ content | safe }}
       </main>
     </div>
   </body>
+  {% include '_js.njk'%}
 </html>

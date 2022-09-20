@@ -1,0 +1,30 @@
+{# PANTONE THEMING FOR THE SITE #}
+{# desktop version with range slider #}
+<div class="hidden lg:block fixed top-4 left-8 w-[46%]">
+    <div class="flex flex-col gap-4 mb-4 mx-8">
+        <label for="pantone-color-year" class="block mb-2 text-sm font-medium">
+        <ul class="flex flex-row justify-between">
+            <li>2000</li>
+            <li>2020</li>
+        </ul>
+        </label>
+        <input id="pantone-color-year" type="range" min="2000" max="2022" value="2022" step="1" class="w-full h-2 bg-noir rounded-lg appearance-none cursor-pointer" oninput="handleThemingDesktop()">
+    </div>
+    <p class="lg:inline hidden mx-8">Thème Pantone <output>2022</output></p>
+</div>
+
+{# mobile version with dropdown #}
+<button id="mobile-theme-button" onclick="toggleThemeMenu()" class="fixed border-2 border-darktone dark:border-lghtgrey1 px-2 py-1 rounded-md font-medium text-center inline-flex lg:hidden items-center mt-7 ml-4" type="button">Themes{% feather "chevron-down", {"aria-hidden": "true", "focusable":"false"} %}</button>
+{# dropdown menu #}
+<div id="themeMenu" class="hidden text-left z-10 w-[85vw] fixed top-20 left-8 bg-lghtgrey1 dark:bg-darktone">
+    <ul class="overflow-y-auto py-1 h-[60vh] text-noir" aria-labelledby="dropdownUsersButton">
+    {% for item in color.colors %}
+    <li class="my-2">
+        <div class="flex flex-row items-center">
+        <div class="w-8 h-8 mr-2" style="background-color:{{item.hsl}};"></div>
+        <button class="{{item.year}}" type="button" onclick="handleThemingMobile(this)">{{item.year}} - {{item.name}}</button>
+        </div>
+    </li>
+    {% endfor %}
+    </ul>
+</div>

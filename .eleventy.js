@@ -1,5 +1,6 @@
 const format = require('date-fns/format');
 const fs = require('fs');
+const eleventyPluginFeathericons = require('eleventy-plugin-feathericons');
 
 let getSvgContent = function (file,id) {
   let relativeFilePath = `./src/assets/images/${file}.svg`;
@@ -18,6 +19,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/js");
   eleventyConfig.addPassthroughCopy("./src/*.ico");
   eleventyConfig.addPassthroughCopy("./src/apple-touch-icon.png");
+
+  eleventyConfig.addPlugin(eleventyPluginFeathericons);
 
   eleventyConfig.addFilter('date', function (date, dateFormat) {
     return format(date, dateFormat)
