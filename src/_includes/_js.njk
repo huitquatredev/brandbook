@@ -1,15 +1,16 @@
 <script>
+    fitty('.fittext');
+
+    /* Handle the dark/light toggle button */
     const sun = document.querySelector(".feather-sun");
     const moon = document.querySelector(".feather-moon");
     sun.classList.toggle("hidden");
 
-    /* Handle the dark/light toggle button */
     function toggleDarkMode(){
       document.body.classList.toggle("dark");
       sun.classList.toggle("hidden");
       moon.classList.toggle("hidden");
     }
-
 
     /* Handle the theming pantone color of the year */
     /* theming preference is saved locally*/
