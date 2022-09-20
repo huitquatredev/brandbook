@@ -11,7 +11,10 @@ module.exports = {
       'lghtgrey3': 'var(--color-lghtgrey3)',
       'darkgrey1': 'var(--color-darkgrey1)',
       'darkgrey2': 'var(--color-darkgrey2)',
-      'darkgrey3': 'var(--color-darkgrey3)'
+      'darkgrey3': 'var(--color-darkgrey3)',
+      'whitegrey1': 'var(--color-whitegrey1)',
+      'whitegrey2': 'var(--color-whitegrey2)',
+      'whitegrey3': 'var(--color-whitegrey3)'
     },
     extend: {},
   },

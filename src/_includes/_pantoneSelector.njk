@@ -22,7 +22,7 @@
     <li class="my-2">
         <div class="flex flex-row items-center">
         <div class="w-8 h-8 mr-2" style="background-color:{{item.hsl}};"></div>
-        <button class="{{item.year}}" type="button" onclick="handleThemingMobile(this)">{{item.year}} - {{item.name}}</button>
+        <button year={{item.year}} class="border-0" type="button" onclick="handleThemingMobile(this)">{{item.year}} - {{item.name}}</button>
         </div>
     </li>
     {% endfor %}

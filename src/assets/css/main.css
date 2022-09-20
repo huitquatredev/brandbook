@@ -30,6 +30,10 @@ body{
   font-family: 'Libre Franklin', sans-serif;
 }
 
+button{
+  @apply border-2 dark:border-lghtgrey1 border-darktone rounded-md;
+}
+
 #wrapper{
   @apply bg-lghtgrey1 dark:bg-darktone text-darktone dark:text-lghtgrey1;
 }
@@ -51,40 +55,6 @@ body{
   cursor: pointer;
 }
 
-.bg-light{
-  background-color: var(--color-lghtgrey1);
-}
-.bg-dark{
-  background-color: var(--color-darktone);
-}
-#themed--light .rect--big{
-  fill: var(--color-pantone);
-}
-#themed--light .rect--top{
-  fill: var(--color-lightone);
-}
-#themed--light .rect--bot,#themed--light .logotext{
-  fill: var(--color-darktone);
-}
-#themed--dark .rect--big{
-  fill: var(--color-lghtgrey2);
-}
-#themed--dark .rect--top{
-  fill: var(--color-lghtgrey3);
-}
-#themed--dark .rect--bot,#themed--dark .logotext{
-  fill: var(--color-lghtgrey1);
-}
-
-#blanc .rect--big{
-  fill: var(--color-darkgrey2);
-}
-#blanc .rect--top{
-  fill: var(--color-darkgrey3);
-}
-#blanc .rect--bot,#blanc .logotext{
-  fill: var(--color-darkgrey1);
-}
 #noir .rect--big{
   fill: var(--color-whitegrey2);
 }

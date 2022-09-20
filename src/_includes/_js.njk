@@ -1,4 +1,15 @@
 <script>
+    function downloadSVG(id) {
+      const svg = document.getElementById(id).outerHTML;
+      const blob = new Blob([svg.toString()]);
+      const element = document.createElement("a");
+      element.download = `logo_${id}.svg`;
+      element.href = window.URL.createObjectURL(blob);
+      element.click();
+      element.remove();
+    }
+
+    /* Fitty !!! */
     fitty('.fittext');
 
     /* Handle the dark/light toggle button */
@@ -21,8 +32,27 @@
 
       //Get the root for changing CSS vars
       const root = document.querySelector('html');
+
       //Get the output element
       const output = document.querySelector('output');
+
+      //Get the SVGs
+      // THEMED LIGHT
+      const svgThemedLight = document.querySelector("#themed--light");
+      const svgThemedLightText = svgThemedLight.querySelectorAll("path.logotext");
+      const svgThemedLightRectBot = svgThemedLight.querySelectorAll("rect.rect--bot");
+      const svgThemedLightRectTop = svgThemedLight.querySelectorAll("rect.rect--top");
+      const svgThemedLightRectBig = svgThemedLight.querySelectorAll("rect.rect--big");
+
+      // THEMED DARK
+      const svgThemedDark = document.querySelector("#themed--dark");
+      const svgThemedDarkText = svgThemedDark.querySelectorAll("path.logotext");
+      const svgThemedDarkRectBot = svgThemedDark.querySelectorAll("rect.rect--bot");
+      const svgThemedDarkRectTop = svgThemedDark.querySelectorAll("rect.rect--top");
+      const svgThemedDarkRectBig = svgThemedDark.querySelectorAll("rect.rect--big");
+
+
+
       //Save the value in localStorage
       localStorage.theme = year;
       //Get the data from my json file
@@ -32,7 +62,6 @@
       let coloroftheyear = data.colors.filter(obj => {
           return obj.year === year;
       });
-
       if(coloroftheyear.length === 1){  
         //Ensure a sufficient contrast on each color
         root.style.setProperty('--onPantone',coloroftheyear[0].contrastPantone);
@@ -96,14 +125,40 @@
         s3 = s3 + "%";
         hsl = 'hsl('+h+' '+s1+' '+l1+')';
         root.style.setProperty('--color-darktone',hsl);
+        svgThemedLightText.forEach(path =>{
+          path.setAttribute('fill',hsl);
+        });
+        svgThemedLightRectBot.forEach(path =>{
+          path.setAttribute('fill',hsl);
+        });
+        svgThemedDark.setAttribute("style",`background-color:${hsl}`);
         hsl = 'hsl('+h+' '+s2+' '+l2+')';
         root.style.setProperty('--color-pantone',hsl);
+        svgThemedLightRectBig.forEach(path =>{
+          path.setAttribute('fill',hsl);
+        });
         hsl = 'hsl('+h+' '+s3+' '+l3+')';
-        root.style.setProperty('--color-lightone',hsl);        
+        root.style.setProperty('--color-lightone',hsl);
+        svgThemedLightRectTop.forEach(path =>{
+          path.setAttribute('fill',hsl);
+        });
         //Tint the light greys according to pantone color
         root.style.setProperty('--color-lghtgrey1','hsl('+h+' 10% 95%)');
+        svgThemedDarkRectBot.forEach(path =>{
+          path.setAttribute('fill',`hsl(${h} 10% 95%)`);
+        });
+        svgThemedDarkText.forEach(path =>{
+          path.setAttribute('fill',`hsl(${h} 10% 95%)`);
+        });
+        svgThemedLight.setAttribute("style",`background-color:hsl(${h} 10% 95%)`);
         root.style.setProperty('--color-lghtgrey2','hsl('+h+' 30% 70%)');
+        svgThemedDarkRectBig.forEach(path =>{
+          path.setAttribute('fill',`hsl(${h} 30% 70%)`);
+        });
         root.style.setProperty('--color-lghtgrey3','hsl('+h+' 40% 60%)');
+        svgThemedDarkRectTop.forEach(path =>{
+          path.setAttribute('fill',`hsl(${h} 40% 60%)`);
+        });
       }
       else{
         /*
@@ -155,7 +210,7 @@
 
     function handleThemingMobile(but){
       //Get the input/output
-      const input = but.classList.value;
+      const input = but.getAttribute("year");
       //Apply Theming
       applyTheme(input);
       //Close dropdown
