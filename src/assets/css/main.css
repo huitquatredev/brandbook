@@ -17,6 +17,10 @@
   --color-lghtgrey2: hsl(0 0% 75%);
   --color-lghtgrey3: hsl(0 0% 60%);
 
+  --color-whitegrey1: hsl(0 0% 97%);
+  --color-whitegrey2: hsl(0 0% 75%);
+  --color-whitegrey3: hsl(0 0% 60%);
+
   --color-darkgrey1: hsl(0 0% 15%);
   --color-darkgrey2: hsl(0 0% 40%);
   --color-darkgrey3: hsl(0 0% 60%);
@@ -53,23 +57,42 @@ body{
 .bg-dark{
   background-color: var(--color-darktone);
 }
-#blanc .rect--big{
+#themed--light .rect--big{
   fill: var(--color-pantone);
 }
-#blanc .rect--top{
+#themed--light .rect--top{
   fill: var(--color-lightone);
 }
-#blanc .rect--bot,#blanc .logotext{
+#themed--light .rect--bot,#themed--light .logotext{
   fill: var(--color-darktone);
 }
-#noir .rect--big{
+#themed--dark .rect--big{
   fill: var(--color-lghtgrey2);
 }
-#noir .rect--top{
+#themed--dark .rect--top{
   fill: var(--color-lghtgrey3);
 }
-#noir .rect--bot,#noir .logotext{
+#themed--dark .rect--bot,#themed--dark .logotext{
   fill: var(--color-lghtgrey1);
+}
+
+#blanc .rect--big{
+  fill: var(--color-darkgrey2);
+}
+#blanc .rect--top{
+  fill: var(--color-darkgrey3);
+}
+#blanc .rect--bot,#blanc .logotext{
+  fill: var(--color-darkgrey1);
+}
+#noir .rect--big{
+  fill: var(--color-whitegrey2);
+}
+#noir .rect--top{
+  fill: var(--color-whitegrey3);
+}
+#noir .rect--bot,#noir .logotext{
+  fill: var(--color-whitegrey1);
 }
 
 
