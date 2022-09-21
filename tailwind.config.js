@@ -16,7 +16,11 @@ module.exports = {
       'whitegrey2': 'var(--color-whitegrey2)',
       'whitegrey3': 'var(--color-whitegrey3)'
     },
-    extend: {},
+    extend: {
+      screens: {
+        'xs': '400px',
+      },
+    },
   },
   plugins: [],
 }

@@ -30,6 +30,10 @@ body{
   font-family: 'Libre Franklin', sans-serif;
 }
 
+h2{
+  @apply mb-16 font-light;
+}
+
 button{
   @apply border-2 dark:border-lghtgrey1 border-darktone rounded-md;
 }
