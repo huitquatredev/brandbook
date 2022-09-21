@@ -55,14 +55,4 @@ button{
   cursor: pointer;
 }
 
-#noir .rect--big{
-  fill: var(--color-whitegrey2);
-}
-#noir .rect--top{
-  fill: var(--color-whitegrey3);
-}
-#noir .rect--bot,#noir .logotext{
-  fill: var(--color-whitegrey1);
-}
-
 

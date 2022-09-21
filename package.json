@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
-    "fs": "^0.0.1-security"
+    "@11ty/eleventy-img": "^2.0.1",
+    "fs": "^0.0.1-security",
+    "terser": "^5.15.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.1",

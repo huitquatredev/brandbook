@@ -1,21 +1,45 @@
 <div class="h-[40vh]"></div>
-<section id="logos" class="w-[80vw] mx-auto flex flex-col items-center">
+<section id="logos">
     <div class="w-[50vw] mx-auto">
-        <div class="fittext text-center">Click on a logo to download a SVG</div>
+        <div class="fittext text-center">Vous pouvez générer plus de 200 logos différents en ajustant le thème Pantone</div>
+        <div class="fittext text-center">Cliquez sur un logo pour le télécharger en SVG</div>
     </div>
-    
-    <button onclick='downloadSVG(this.id)' id="themedLight" class="border-0 bg-lghtgrey1 w-full mx-auto flex justify-center">
-        {% svg 'logo_themed_light', 'id="themed--light" class="m-16 max-w-md"' %}
-    </button>
-    
-    <button onclick='downloadSVG(this.id)' id="themedDark" class="border-0 bg-darktone w-full mx-auto flex justify-center">
-        {% svg 'logo_themed_dark', 'id="themed--dark" class="m-16 max-w-md"' %}
-    </button>
+    <div class="my-16 w-[80vw] mx-auto flex flex-col justify-center items-center">    
+        <button onclick='downloadSVG(this.id)' id="themedLight" class="border-0 rounded-none w-full bg-lghtgrey1 dark:hidden flex justify-center">
+            {% svg 'logo_themed_light', 'id="themed--light" class="m-16 max-w-md min-w-[75px]"' %}
+        </button>
+        <button onclick='downloadSVG(this.id)' id="largeThemedLight" class="border-0 rounded-none w-full bg-lghtgrey1 dark:hidden flex justify-center">
+            {% svg 'logo_large_themed_light', 'id="large-themed--light" class="m-16 max-w-4xl min-w-[150px]"' %}
+        </button>
+        
+        <button onclick='downloadSVG(this.id)' id="themedDark" class="border-0 rounded-none w-full bg-darktone mx-auto hidden dark:flex justify-center">
+            {% svg 'logo_themed_dark', 'id="themed--dark" class="m-16 max-w-md min-w-[75px]"' %}
+        </button>
+        <button onclick='downloadSVG(this.id)' id="largeThemedDark" class="border-0 rounded-none w-full bg-darktone mx-auto hidden dark:flex justify-center">
+            {% svg 'logo_large_themed_dark', 'id="large-themed--dark" class="m-16 max-w-4xl min-w-[150px]"' %}
+        </button>
 
-    <button onclick='downloadSVG(this.id)' id="BW-BG-blanc" class="border-0 w-full bg-whitegrey1 mx-auto flex justify-center">
-        {% svg 'logo_white', 'id="white" class="m-16 max-w-md"' %}
-    </button>
-    <button onclick='downloadSVG(this.id)' id="BW-BG-noir" class="w-full border-0 bg-darkgrey1 mx-auto flex justify-center">
-        {% svg 'logo_black', 'id="black" class="m-16 max-w-md"' %}
-    </button>
+        <button onclick='downloadSVG(this.id)' id="BW-BG-blanc" class="border-0 rounded-none w-full bg-whitegrey1 mx-auto dark:hidden flex justify-center">
+            {% svg 'logo_white', 'id="white" class="m-16 max-w-md min-w-[75px]"' %}
+        </button>
+        <button onclick='downloadSVG(this.id)' id="BW-BG-blanc-large" class="border-0 rounded-none w-full bg-whitegrey1 dark:hidden flex justify-center">
+            {% svg 'logo_large_white', 'id="large_white" class="m-16 max-w-4xl min-w-[150px]"' %}
+        </button>
+        <button onclick='downloadSVG(this.id)' id="BW-BG-noir-large" class="border-0 rounded-none w-full bg-darkgrey1 mx-auto hidden dark:flex justify-center">
+            {% svg 'logo_large_black', 'id="large_black" class="m-16 max-w-4xl min-w-[150px]"' %}
+        </button>
+        <button onclick='downloadSVG(this.id)' id="BW-BG-noir" class="border-0 rounded-none w-full bg-darkgrey1 mx-auto hidden dark:flex justify-center">
+            {% svg 'logo_black', 'id="black" class="m-16 max-w-md min-w-[75px]"' %}
+        </button>
+    </div>
+    <div class="w-[50vw] mx-auto my-16">
+        <div class="fittext text-center">Clearspace - espace libre</div>
+    </div>
+    {% image 'clear','','w-[90vw] mx-auto','src/assets/images/clearspace.jpg',"comment utiliser l'espace libre autour du logo","(max-width:300px) 300px, (max-width:600px) 600px, 1200px" %}
+
+    {% image 'clear-hover', 'hidden', 'w-[90vw] mx-auto','src/assets/images/clearspace_hover.jpg',"comment utiliser l'espace libre autour du logo","(max-width:300px) 300px, (max-width:600px) 600px, 1200px" %}
+
+    {% image 'clear-large','','w-[90vw] mx-auto','src/assets/images/clearspace_large.jpg',"comment utiliser l'espace libre autour du logo","(max-width:300px) 300px, (max-width:600px) 600px, 1200px" %}
+
+    {% image 'clear-large-hover', 'hidden', 'w-[90vw] mx-auto','src/assets/images/clearspace_large_hover.jpg',"comment utiliser l'espace libre autour du logo","(max-width:300px) 300px, (max-width:600px) 600px, 1200px" %}
 </section>
