@@ -26,20 +26,117 @@
   --color-darkgrey3: hsl(0 0% 60%);
 }
 
-body{
-  font-family: 'Libre Franklin', sans-serif;
+/* UTOPIA FONT SCALE */
+
+:root {
+  --fluid-min-width: 300;
+  --fluid-max-width: 768;
+
+  --fluid-screen: 100vw;
+  --fluid-bp: calc(
+    (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+      (var(--fluid-max-width) - var(--fluid-min-width))
+  );
 }
 
+@media screen and (min-width: 768px) {
+  :root {
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
+  }
+}
+
+:root {
+  --f--2-min: 9.00;
+  --f--2-max: 15.36;
+  --step--2: calc(
+    ((var(--f--2-min) / 16) * 1rem) + (var(--f--2-max) - var(--f--2-min)) *
+      var(--fluid-bp)
+  );
+
+  --f--1-min: 12.00;
+  --f--1-max: 19.20;
+  --step--1: calc(
+    ((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-0-min: 16.00;
+  --f-0-max: 24.00;
+  --step-0: calc(
+    ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-1-min: 21.33;
+  --f-1-max: 30.00;
+  --step-1: calc(
+    ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-2-min: 28.43;
+  --f-2-max: 37.50;
+  --step-2: calc(
+    ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-3-min: 37.90;
+  --f-3-max: 46.88;
+  --step-3: calc(
+    ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-4-min: 50.52;
+  --f-4-max: 58.59;
+  --step-4: calc(
+    ((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-5-min: 67.34;
+  --f-5-max: 73.24;
+  --step-5: calc(
+    ((var(--f-5-min) / 16) * 1rem) + (var(--f-5-max) - var(--f-5-min)) *
+      var(--fluid-bp)
+  );
+}
+
+body{
+  font-family: 'Libre Franklin', sans-serif;
+
+}
+h1{
+  @apply text-fluid-5 font-black leading-tight my-32;
+}
 h2{
-  @apply mb-16 font-light;
+  @apply text-fluid-3 font-thin uppercase leading-tight my-16;
+}
+h3{
+  @apply text-fluid-3 font-normal leading-none my-12;
+}
+h4{
+  @apply text-fluid-2 font-thin uppercase leading-none my-8;
+}
+h5{
+  @apply text-fluid-1 font-normal leading-none my-8;
+}
+
+p{
+  @apply text-fluid-0 font-light max-w-[40ch] lg:max-w-[50ch] lg:leading-relaxed lg:tracking-wide;
+}
+
+.blocText{
+  @apply space-y-4;
 }
 
 button{
-  @apply border-2 dark:border-lghtgrey1 border-darktone rounded-md;
+  @apply border-2 dark:border-lghtgrey1 border-darktone rounded-md text-darktone dark:text-lghtgrey1;
 }
 
 #wrapper{
-  @apply bg-lghtgrey1 dark:bg-darktone text-darktone dark:text-lghtgrey1;
+  @apply bg-lghtgrey1 dark:bg-darktone text-darktone dark:text-lghtgrey1 px-4 sm:px-8 md:px-16;
 }
 
 #pantone-color-year::-webkit-slider-thumb{

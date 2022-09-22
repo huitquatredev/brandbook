@@ -17,8 +17,15 @@ module.exports = {
       'whitegrey3': 'var(--color-whitegrey3)'
     },
     extend: {
-      screens: {
-        'xs': '400px',
+      fontSize: {
+        'fluid--2': 'var(--step--2)',
+        'fluid--1': 'var(--step--1)',
+        'fluid-0': 'var(--step-0)',
+        'fluid-1': 'var(--step-1)',
+        'fluid-2': 'var(--step-2)',
+        'fluid-3': 'var(--step-3)',
+        'fluid-4': 'var(--step-4)',
+        'fluid-5': 'var(--step-5)'
       },
     },
   },
