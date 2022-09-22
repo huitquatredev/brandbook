@@ -108,19 +108,19 @@ body{
 
 }
 h1{
-  @apply text-fluid-5 font-black leading-tight my-32;
+  @apply text-fluid-5 font-black leading-tight pb-32;
 }
 h2{
-  @apply text-fluid-3 font-thin uppercase leading-tight my-16;
+  @apply text-fluid-3 font-thin uppercase leading-tight py-16;
 }
 h3{
-  @apply text-fluid-3 font-normal leading-none my-12;
+  @apply text-fluid-3 font-normal leading-none py-12;
 }
 h4{
-  @apply text-fluid-2 font-thin uppercase leading-none my-8;
+  @apply text-fluid-2 font-thin uppercase leading-none py-8;
 }
 h5{
-  @apply text-fluid-1 font-normal leading-none my-8;
+  @apply text-fluid-1 font-normal leading-none py-8;
 }
 
 p{
