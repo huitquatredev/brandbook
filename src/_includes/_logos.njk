@@ -1,50 +1,79 @@
-<div class="h-[40vh]"></div>
+<div class="separateur"></div>
 
 <section id="logos">
-    <div class="w-[50vw] mx-auto">
-        <h2 class="fittext">Logo</h2>
+    <h2>Logotype / Logomark</h2>
+    <div class="blocText text-center">
+        <p class="mx-auto">Vous pouvez générer plus de 200 logos différents en ajustant le thème Pantone.</p>
+        <p class="mx-auto">Cliquez sur un logo pour le télécharger en SVG.</p>
     </div>
-    <div class="w-[50vw] mx-auto">
-        <div class="fittext text-center">Vous pouvez générer plus de 200 logos différents en ajustant le thème Pantone</div>
-        <div class="fittext text-center">Cliquez sur un logo pour le télécharger en SVG</div>
-    </div>
-    <div class="my-16 w-[80vw] mx-auto flex flex-col justify-center items-center">    
-        <button onclick='downloadSVG(this.id)' id="themedLight" class="border-0 rounded-none w-full bg-lghtgrey1 dark:hidden flex justify-center">
+    
+    <div class="flex flex-col justify-center items-center">    
+        <button onclick='downloadSVG(this.id)' id="themedLight" class="border-0 rounded-none full-width bg-lghtgrey1 dark:hidden flex justify-center">
             {% svg 'logo_themed_light', 'id="themed--light" class="m-16 max-w-md min-w-[75px]"' %}
         </button>
-        <button onclick='downloadSVG(this.id)' id="largeThemedLight" class="border-0 rounded-none w-full bg-lghtgrey1 dark:hidden flex justify-center">
+        <button onclick='downloadSVG(this.id)' id="largeThemedLight" class="border-0 rounded-none full-width bg-lghtgrey1 dark:hidden flex justify-center">
             {% svg 'logo_large_themed_light', 'id="large-themed--light" class="m-16 max-w-4xl min-w-[150px]"' %}
         </button>
         
-        <button onclick='downloadSVG(this.id)' id="themedDark" class="border-0 rounded-none w-full bg-darktone mx-auto hidden dark:flex justify-center">
+        <button onclick='downloadSVG(this.id)' id="themedDark" class="border-0 rounded-none full-width bg-darktone hidden dark:flex justify-center">
             {% svg 'logo_themed_dark', 'id="themed--dark" class="m-16 max-w-md min-w-[75px]"' %}
         </button>
-        <button onclick='downloadSVG(this.id)' id="largeThemedDark" class="border-0 rounded-none w-full bg-darktone mx-auto hidden dark:flex justify-center">
+        <button onclick='downloadSVG(this.id)' id="largeThemedDark" class="border-0 rounded-none full-width bg-darktone hidden dark:flex justify-center">
             {% svg 'logo_large_themed_dark', 'id="large-themed--dark" class="m-16 max-w-4xl min-w-[150px]"' %}
         </button>
 
-        <button onclick='downloadSVG(this.id)' id="BW-BG-blanc" class="border-0 rounded-none w-full bg-whitegrey1 mx-auto dark:hidden flex justify-center">
+        <button onclick='downloadSVG(this.id)' id="BW-BG-blanc" class="border-0 rounded-none full-width bg-whitegrey1 dark:hidden flex justify-center">
             {% svg 'logo_white', 'id="white" class="m-16 max-w-md min-w-[75px]"' %}
         </button>
-        <button onclick='downloadSVG(this.id)' id="BW-BG-blanc-large" class="border-0 rounded-none w-full bg-whitegrey1 dark:hidden flex justify-center">
+        <button onclick='downloadSVG(this.id)' id="BW-BG-blanc-large" class="border-0 rounded-none full-width bg-whitegrey1 dark:hidden flex justify-center">
             {% svg 'logo_large_white', 'id="large_white" class="m-16 max-w-4xl min-w-[150px]"' %}
         </button>
-        <button onclick='downloadSVG(this.id)' id="BW-BG-noir-large" class="border-0 rounded-none w-full bg-darkgrey1 mx-auto hidden dark:flex justify-center">
-            {% svg 'logo_large_black', 'id="large_black" class="m-16 max-w-4xl min-w-[150px]"' %}
-        </button>
-        <button onclick='downloadSVG(this.id)' id="BW-BG-noir" class="border-0 rounded-none w-full bg-darkgrey1 mx-auto hidden dark:flex justify-center">
+
+        <button onclick='downloadSVG(this.id)' id="BW-BG-noir" class="border-0 rounded-none full-width bg-darkgrey1 hidden dark:flex justify-center">
             {% svg 'logo_black', 'id="black" class="m-16 max-w-md min-w-[75px]"' %}
         </button>
+        <button onclick='downloadSVG(this.id)' id="BW-BG-noir-large" class="border-0 rounded-none full-width bg-darkgrey1 hidden dark:flex justify-center">
+            {% svg 'logo_large_black', 'id="large_black" class="m-16 max-w-4xl min-w-[150px]"' %}
+        </button>
     </div>
-    <div class="w-[50vw] mx-auto my-16">
-        <div class="fittext text-center">Clearspace - espace libre</div>
-        <div class="fittext text-center">Passez la souris / cliquez sur le format de logo</div>
+
+    <h3>Placement du logo : clearspace - espace libre</h3>
+    <div class="">
+        <p class="text-center mx-auto mb-16">Passez la souris / cliquez sur le logo</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="leading-none border border-pantone space-y-2">
+                <div class="logo hover:bg-pantone hover:dark:bg-darkgrey3">
+                    {% svg 'logo_themed_light', 'id="toBeColorized" class="w-[15vw] logo-normal-margin"' %}
+                </div>
+                <p class="text-fluid--2 max-w-none">Cupcake ipsum dolor sit amet croissant marzipan liquorice. Lemon drops cake chupa chups macaroon cotton candy I love sweet roll. Cake chupa chups I love sweet roll jelly cake cake chocolate bar caramels.</p>
+                <p class="text-fluid--2 max-w-none">I love gummi bears marzipan macaroon donut sweet roll oat cake lollipop. Icing cheesecake marzipan bear claw I love. Lemon drops sweet roll tart caramels macaroon candy biscuit sweet roll. Pie I love pie sweet candy canes I love I love.</p>
+                <p class="text-fluid--2 max-w-none">I love apple pie I love wafer dessert dessert tiramisu liquorice. Jelly gingerbread sugar plum I love lemon drops halvah cotton candy dessert icing. Halvah sweet roll pudding liquorice jelly beans.</p>
+                <p class="text-fluid--2 max-w-none">Cupcake ipsum dolor sit amet croissant marzipan liquorice. Lemon drops cake chupa chups macaroon cotton candy I love sweet roll. Cake chupa chups I love sweet roll jelly cake cake chocolate bar caramels.</p>
+                <p class="text-fluid--2 max-w-none">I love gummi bears marzipan macaroon donut sweet roll oat cake lollipop. Icing cheesecake marzipan bear claw I love. Lemon drops sweet roll tart caramels macaroon candy biscuit sweet roll. Pie I love pie sweet candy canes I love I love.</p>
+                <p class="text-fluid--2 max-w-none">I love apple pie I love wafer dessert dessert tiramisu liquorice. Jelly gingerbread sugar plum I love lemon drops halvah cotton candy dessert icing. Halvah sweet roll pudding liquorice jelly beans.</p>
+            </div>
+
+            <div class="blocText">
+                <p>On doit respecter un espacement d'au moins la petite largeur d'un rectangle du logo</p>
+                <code>&lt;div class="logo"&gt;<br>&nbsp;&nbsp;&lt;img class="w-64 logo-normal-margin"/&gt;<br>&lt;/div&gt;</code>
+                <code>&lt;div class="logo"&gt;<br>&nbsp;&nbsp;&lt;img class="w-64 logo-large-margin"/&gt;<br>&lt;/div&gt;</code>
+            </div>
+
+            <div class="leading-none border border-pantone space-y-2">
+                <div class="logo hover:bg-pantone hover:dark:bg-darkgrey3">
+                    {% svg 'logo_large_themed_light', 'id="toBeColorized" class="w-[30vw] logo-large-margin"' %}
+                </div>
+                <p class="text-fluid--2 max-w-none">Cupcake ipsum dolor sit amet croissant marzipan liquorice. Lemon drops cake chupa chups macaroon cotton candy I love sweet roll. Cake chupa chups I love sweet roll jelly cake cake chocolate bar caramels.</p>
+                <p class="text-fluid--2 max-w-none">I love gummi bears marzipan macaroon donut sweet roll oat cake lollipop. Icing cheesecake marzipan bear claw I love. Lemon drops sweet roll tart caramels macaroon candy biscuit sweet roll. Pie I love pie sweet candy canes I love I love.</p>
+                <p class="text-fluid--2 max-w-none">I love apple pie I love wafer dessert dessert tiramisu liquorice. Jelly gingerbread sugar plum I love lemon drops halvah cotton candy dessert icing. Halvah sweet roll pudding liquorice jelly beans.</p>
+                <p class="text-fluid--2 max-w-none">Cupcake ipsum dolor sit amet croissant marzipan liquorice. Lemon drops cake chupa chups macaroon cotton candy I love sweet roll. Cake chupa chups I love sweet roll jelly cake cake chocolate bar caramels.</p>
+                <p class="text-fluid--2 max-w-none">I love gummi bears marzipan macaroon donut sweet roll oat cake lollipop. Icing cheesecake marzipan bear claw I love. Lemon drops sweet roll tart caramels macaroon candy biscuit sweet roll. Pie I love pie sweet candy canes I love I love.</p>
+                <p class="text-fluid--2 max-w-none">I love apple pie I love wafer dessert dessert tiramisu liquorice. Jelly gingerbread sugar plum I love lemon drops halvah cotton candy dessert icing. Halvah sweet roll pudding liquorice jelly beans.</p>
+            </div>
+
+        </div>
+        
     </div>
-    {% image 'clear','','w-[90vw] mx-auto','src/assets/images/clearspace.jpg',"comment utiliser l'espace libre autour du logo","(max-width:300px) 300px, (max-width:600px) 600px, 1200px" %}
-
-    {% image 'clear-hover', 'hidden', 'w-[90vw] mx-auto','src/assets/images/clearspace_hover.jpg',"comment utiliser l'espace libre autour du logo","(max-width:300px) 300px, (max-width:600px) 600px, 1200px" %}
-
-    {% image 'clear-large','','w-[90vw] mx-auto','src/assets/images/clearspace_large.jpg',"comment utiliser l'espace libre autour du logo","(max-width:300px) 300px, (max-width:600px) 600px, 1200px" %}
-
-    {% image 'clear-large-hover', 'hidden', 'w-[90vw] mx-auto','src/assets/images/clearspace_large_hover.jpg',"comment utiliser l'espace libre autour du logo","(max-width:300px) 300px, (max-width:600px) 600px, 1200px" %}
+    
 </section>

@@ -1,26 +1,3 @@
-
-/* Switch images on hover */
-const clearspace = document.getElementById("clear");
-const clearspaceHover = document.getElementById("clear-hover");
-const clearspaceLarge = document.getElementById("clear-large");
-const clearspaceLargeHover = document.getElementById("clear-large-hover");
-clearspace.addEventListener("mouseenter",() => {
-  clearspace.classList.toggle("hidden");
-  clearspaceHover.classList.toggle("hidden");
-});
-clearspaceHover.addEventListener("mouseleave",() => {
-  clearspace.classList.toggle("hidden");
-  clearspaceHover.classList.toggle("hidden");
-});
-clearspaceLarge.addEventListener("mouseenter",() => {
-  clearspaceLarge.classList.toggle("hidden");
-  clearspaceLargeHover.classList.toggle("hidden");
-});
-clearspaceLargeHover.addEventListener("mouseleave",() => {
-  clearspaceLarge.classList.toggle("hidden");
-  clearspaceLargeHover.classList.toggle("hidden");
-});
-
 /* Download SVG */
 function downloadSVG(id) {
   const svg = document.getElementById(id).outerHTML;

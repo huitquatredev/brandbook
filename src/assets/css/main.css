@@ -26,6 +26,22 @@
   --color-darkgrey3: hsl(0 0% 60%);
 }
 
+#toBeColorized .logotext{
+  @apply fill-[var(--color-darktone)] dark:fill-[var(--color-lghtgrey1)];
+}
+#toBeColorized .rect--big{
+  @apply fill-[var(--color-pantone)] dark:fill-[var(--color-lghtgrey2)];
+}
+#toBeColorized .rect--top{
+  @apply fill-[var(--color-lightone)] dark:fill-[var(--color-lghtgrey3)];
+}
+#toBeColorized .rect--bot{
+  @apply fill-[var(--color-darktone)] dark:fill-[var(--color-lghtgrey1)];
+}
+#toBeColorized{
+  @apply bg-clip-content bg-lghtgrey1 dark:bg-darktone;
+}
+
 /* UTOPIA FONT SCALE */
 
 :root {
@@ -108,31 +124,76 @@ body{
 
 }
 h1{
-  @apply text-fluid-5 font-black leading-tight pb-32;
+  @apply font-black leading-none w-3/4 mx-auto pb-16;
 }
 h2{
-  @apply text-fluid-3 font-thin uppercase leading-tight py-16;
+  @apply text-fluid-4 font-thin uppercase leading-tight pt-16 pb-8;
 }
 h3{
-  @apply text-fluid-3 font-normal leading-none py-12;
+  @apply text-fluid-3 font-normal leading-none underline decoration-8 decoration-lightone dark:decoration-pantone pt-8 pb-4;
 }
 h4{
-  @apply text-fluid-2 font-thin uppercase leading-none py-8;
+  @apply text-fluid-2 font-thin uppercase leading-none pt-6 pb-4;
 }
 h5{
-  @apply text-fluid-1 font-normal leading-none py-8;
+  @apply text-fluid-1 font-normal leading-none pt-6 pb-4;
 }
 
 p{
   @apply text-fluid-0 font-light max-w-[40ch] lg:max-w-[50ch] lg:leading-relaxed lg:tracking-wide;
 }
 
-.blocText{
-  @apply space-y-4;
+code{
+  @apply text-fluid--1 block;
+}
+
+hr{
+  @apply my-16;
+}
+
+hr + h1 {
+  @apply pt-0;
+}
+hr + h2 {
+  @apply pt-0;
+}
+hr + h3 {
+  @apply pt-0;
+}
+hr + h4 {
+  @apply pt-0;
+}
+hr + h5 {
+  @apply pt-0;
 }
 
 button{
   @apply border-2 dark:border-lghtgrey1 border-darktone rounded-md text-darktone dark:text-lghtgrey1;
+}
+
+section{
+  @apply pt-24 lg:pt-32;
+}
+
+.blocText{
+  @apply space-y-4 sm:space-y-8;
+}
+.separateur{
+  @apply h-[40vh];
+}
+.full-width{
+  @apply w-screen relative left-1/2 ml-[-50vw] mr-auto;
+}
+.logo{
+  @apply w-fit h-fit float-left;
+}
+
+.logo-normal-margin{
+  padding: calc(100% / 9);
+}
+
+.logo-large-margin{
+  padding: calc(100% / 14);
 }
 
 #wrapper{
