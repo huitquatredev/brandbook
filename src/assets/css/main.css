@@ -130,7 +130,7 @@ h2{
   @apply text-fluid-4 font-thin uppercase leading-tight pt-16 pb-8;
 }
 h3{
-  @apply text-fluid-3 font-normal leading-none underline decoration-8 decoration-lightone dark:decoration-pantone pt-8 pb-4;
+  @apply text-fluid-3 font-normal leading-snug underline decoration-8 decoration-lightone dark:decoration-pantone pt-8 pb-4;
 }
 h4{
   @apply text-fluid-2 font-thin uppercase leading-none pt-6 pb-4;
@@ -170,9 +170,11 @@ hr + h5 {
 button{
   @apply border-2 dark:border-lghtgrey1 border-darktone rounded-md text-darktone dark:text-lghtgrey1;
 }
-
 section{
   @apply pt-24 lg:pt-32;
+}
+img{
+  @apply my-8;
 }
 
 .blocText{
