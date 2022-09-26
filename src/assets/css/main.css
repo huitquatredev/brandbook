@@ -18,12 +18,12 @@
   --color-lghtgrey3: hsl(0 0% 60%);
 
   --color-whitegrey1: hsl(0 0% 97%);
-  --color-whitegrey2: hsl(0 0% 75%);
-  --color-whitegrey3: hsl(0 0% 60%);
+  --color-whitegrey2: hsl(0 0% 83%);
+  --color-whitegrey3: hsl(0 0% 70%);
 
   --color-darkgrey1: hsl(0 0% 15%);
-  --color-darkgrey2: hsl(0 0% 40%);
-  --color-darkgrey3: hsl(0 0% 60%);
+  --color-darkgrey2: hsl(0 0% 35%);
+  --color-darkgrey3: hsl(0 0% 55%);
 }
 
 #toBeColorized .logotext{
@@ -140,7 +140,7 @@ h5{
 }
 
 p{
-  @apply text-fluid-0 font-light max-w-[40ch] lg:max-w-[50ch] lg:leading-relaxed lg:tracking-wide;
+  @apply text-fluid-0 font-light max-w-[40ch] lg:max-w-[50ch] lg:leading-relaxed lg:tracking-wide mx-auto;
 }
 
 code{
@@ -184,7 +184,7 @@ img{
   @apply h-[40vh];
 }
 .full-width{
-  @apply w-screen relative left-1/2 ml-[-50vw] mr-auto;
+  @apply w-[99vw] relative left-1/2 ml-[-50vw] mr-auto;
 }
 .logo{
   @apply w-fit h-fit float-left;

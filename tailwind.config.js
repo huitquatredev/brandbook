@@ -14,7 +14,10 @@ module.exports = {
       'darkgrey3': 'var(--color-darkgrey3)',
       'whitegrey1': 'var(--color-whitegrey1)',
       'whitegrey2': 'var(--color-whitegrey2)',
-      'whitegrey3': 'var(--color-whitegrey3)'
+      'whitegrey3': 'var(--color-whitegrey3)',
+      'onPantone': 'var(--onPantone)',
+      'onDarktone': 'var(--onDarktone)',
+      'onLightone': 'var(--onLightone)'
     },
     extend: {
       fontSize: {

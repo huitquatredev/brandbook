@@ -167,35 +167,34 @@ async function applyTheme(year){
     svgLargeThemedLightRectTop.forEach(path =>{
       path.setAttribute('fill',hsl);
     });
-    //Tint the light greys according to pantone color
-    root.style.setProperty('--color-lghtgrey1','hsl('+h+' 10% 95%)');
+    root.style.setProperty('--color-lghtgrey1','hsl('+h+' 20% 95%)');
     svgThemedDarkRectBot.forEach(path =>{
-      path.setAttribute('fill',`hsl(${h} 10% 95%)`);
+      path.setAttribute('fill',`hsl(${h} 20% 95%)`);
     });
     svgLargeThemedDarkRectBot.forEach(path =>{
-      path.setAttribute('fill',`hsl(${h} 10% 95%)`);
+      path.setAttribute('fill',`hsl(${h} 20% 95%)`);
     });
     svgThemedDarkText.forEach(path =>{
-      path.setAttribute('fill',`hsl(${h} 10% 95%)`);
+      path.setAttribute('fill',`hsl(${h} 20% 95%)`);
     });
     svgLargeThemedDarkText.forEach(path =>{
-      path.setAttribute('fill',`hsl(${h} 10% 95%)`);
+      path.setAttribute('fill',`hsl(${h} 20% 95%)`);
     });
-    svgThemedLight.setAttribute("style",`background-color:hsl(${h} 10% 95%)`);
-    svgLargeThemedLight.setAttribute("style",`background-color:hsl(${h} 10% 95%)`);
-    root.style.setProperty('--color-lghtgrey2','hsl('+h+' 30% 70%)');
+    svgThemedLight.setAttribute("style",`background-color:hsl(${h} 20% 95%)`);
+    svgLargeThemedLight.setAttribute("style",`background-color:hsl(${h} 20% 95%)`);
+    root.style.setProperty('--color-lghtgrey2','hsl('+h+' 30% 80%)');
     svgThemedDarkRectBig.forEach(path =>{
-      path.setAttribute('fill',`hsl(${h} 30% 70%)`);
+      path.setAttribute('fill',`hsl(${h} 30% 80%)`);
     });
     svgLargeThemedDarkRectBig.forEach(path =>{
-      path.setAttribute('fill',`hsl(${h} 30% 70%)`);
+      path.setAttribute('fill',`hsl(${h} 30% 80%)`);
     });
-    root.style.setProperty('--color-lghtgrey3','hsl('+h+' 40% 60%)');
+    root.style.setProperty('--color-lghtgrey3','hsl('+h+' 40% 70%)');
     svgThemedDarkRectTop.forEach(path =>{
-      path.setAttribute('fill',`hsl(${h} 40% 60%)`);
+      path.setAttribute('fill',`hsl(${h} 40% 70%)`);
     });
     svgLargeThemedDarkRectTop.forEach(path =>{
-      path.setAttribute('fill',`hsl(${h} 40% 60%)`);
+      path.setAttribute('fill',`hsl(${h} 40% 70%)`);
     });
   }
   else{
@@ -228,22 +227,86 @@ async function applyTheme(year){
 
     hsl = 'hsl('+h1+' '+s1+' '+l1+')';
     root.style.setProperty('--color-lightone',hsl);
+    svgThemedLightRectTop.forEach(path =>{
+      path.setAttribute('fill',hsl);
+    });
+    svgLargeThemedLightRectTop.forEach(path =>{
+      path.setAttribute('fill',hsl);
+    });
+    root.style.setProperty('--color-lghtgrey1','hsl('+h2+' 20% 95%)');
+    svgThemedDarkRectBot.forEach(path =>{
+      path.setAttribute('fill',`hsl(${h2} 20% 95%)`);
+    });
+    svgLargeThemedDarkRectBot.forEach(path =>{
+      path.setAttribute('fill',`hsl(${h2} 20% 95%)`);
+    });
+    svgThemedDarkText.forEach(path =>{
+      path.setAttribute('fill',`hsl(${h2} 20% 95%)`);
+    });
+    svgLargeThemedDarkText.forEach(path =>{
+      path.setAttribute('fill',`hsl(${h2} 20% 95%)`);
+    });
+    svgThemedLight.setAttribute("style",`background-color:hsl(${h2} 20% 95%)`);
+    svgLargeThemedLight.setAttribute("style",`background-color:hsl(${h2} 20% 95%)`);
+    root.style.setProperty('--color-lghtgrey2','hsl('+h2+' 30% 80%)');
+    svgThemedDarkRectBig.forEach(path =>{
+      path.setAttribute('fill',`hsl(${h2} 30% 80%)`);
+    });
+    svgLargeThemedDarkRectBig.forEach(path =>{
+      path.setAttribute('fill',`hsl(${h2} 30% 80%)`);
+    });
+    root.style.setProperty('--color-lghtgrey3','hsl('+h2+' 40% 70%)');
+    svgThemedDarkRectTop.forEach(path =>{
+      path.setAttribute('fill',`hsl(${h2} 40% 70%)`);
+    });
+    svgLargeThemedDarkRectTop.forEach(path =>{
+      path.setAttribute('fill',`hsl(${h2} 40% 70%)`);
+    });
     hsl = 'hsl('+h2+' '+s2+' '+l2+')';
     root.style.setProperty('--color-pantone',hsl);
+    svgThemedLightRectBig.forEach(path =>{
+      path.setAttribute('fill',hsl);
+    });
+    svgLargeThemedLightRectBig.forEach(path =>{
+      path.setAttribute('fill',hsl);
+    });
     hsl = 'hsl('+h3+' '+s3+' '+l3+')';
     root.style.setProperty('--color-darktone',hsl);
+    svgLargeThemedLightText.forEach(path =>{
+      path.setAttribute('fill',hsl);
+    });
+    svgLargeThemedLightRectBot.forEach(path =>{
+      path.setAttribute('fill',hsl);
+    });
+    svgThemedLightText.forEach(path =>{
+      path.setAttribute('fill',hsl);
+    });
+    svgThemedLightRectBot.forEach(path =>{
+      path.setAttribute('fill',hsl);
+    });
+    svgThemedDark.setAttribute("style",`background-color:${hsl}`);
+    svgLargeThemedDark.setAttribute("style",`background-color:${hsl}`);
     
     //Show the year and the color name selected under the range slider
     output.value = `${year} ${coloroftheyear[0].name} & ${coloroftheyear[1].name}`;        
     //Ensure a sufficient contrast on each color
-    root.style.setProperty('--onPantone',coloroftheyear[0].contrastPantone);
-    root.style.setProperty('--onDarktone',coloroftheyear[0].contrastDark);
-    root.style.setProperty('--onLightone',coloroftheyear[0].contrastLight);
-    //Tint the light greys according to pantone color
-    root.style.setProperty('--color-lghtgrey1','hsl('+h2+' 10% 95%)');
-    root.style.setProperty('--color-lghtgrey2','var(--color-pantone)');
-    root.style.setProperty('--color-lghtgrey3','var(--color-lightone)');
+    root.style.setProperty('--onPantone',coloroftheyear[1].contrastPantone);
+    root.style.setProperty('--onDarktone','#FFF');
+    root.style.setProperty('--onLightone',coloroftheyear[1].contrastLight);
+
   }
+  pan1.textContent = RGBToHex(getComputedStyle(pan1).backgroundColor);
+  pan2.textContent = RGBToHex(getComputedStyle(pan2).backgroundColor);
+  pan3.textContent = RGBToHex(getComputedStyle(pan3).backgroundColor);
+  pan4.textContent = RGBToHex(getComputedStyle(pan4).backgroundColor);
+  pan5.textContent = RGBToHex(getComputedStyle(pan5).backgroundColor);
+  pan6.textContent = RGBToHex(getComputedStyle(pan6).backgroundColor);
+  neu1.textContent = RGBToHex(getComputedStyle(neu1).backgroundColor);
+  neu2.textContent = RGBToHex(getComputedStyle(neu2).backgroundColor);
+  neu3.textContent = RGBToHex(getComputedStyle(neu3).backgroundColor);
+  neu4.textContent = RGBToHex(getComputedStyle(neu4).backgroundColor);
+  neu5.textContent = RGBToHex(getComputedStyle(neu5).backgroundColor);
+  neu6.textContent = RGBToHex(getComputedStyle(neu6).backgroundColor);
 }
 
 function handleThemingMobile(but){
@@ -252,14 +315,14 @@ function handleThemingMobile(but){
   //Apply Theming
   applyTheme(input);
   //Close dropdown
-  toggleThemeMenu();  
+  toggleThemeMenu();
 }
 
 function handleThemingDesktop(){
   //Get the input/output
   const input = document.getElementById('pantone-color-year').value;
   //Apply Theming
-  applyTheme(input);    
+  applyTheme(input);
 }
 
 function setSlider(year){
@@ -273,9 +336,45 @@ function toggleThemeMenu(){
   themeMenu.classList.toggle("hidden");
 }
 
+/* Convert rgb to Hex color */
+function RGBToHex(rgb) {
+  // Choose correct separator
+  let sep = rgb.indexOf(",") > -1 ? "," : " ";
+  // Turn "rgb(r,g,b)" into [r,g,b]
+  rgb = rgb.substr(4).split(")")[0].split(sep);
+
+  let r = (+rgb[0]).toString(16),
+      g = (+rgb[1]).toString(16),
+      b = (+rgb[2]).toString(16);
+
+  if (r.length == 1)
+    r = "0" + r;
+  if (g.length == 1)
+    g = "0" + g;
+  if (b.length == 1)
+    b = "0" + b;
+
+  return "#" + r + g + b;
+}
+const pan1 = document.getElementById("pan1");
+const pan2 = document.getElementById("pan2");
+const pan3 = document.getElementById("pan3");
+const pan4 = document.getElementById("pan4");
+const pan5 = document.getElementById("pan5");
+const pan6 = document.getElementById("pan6");
+
+const neu1 = document.getElementById("neu1");
+const neu2 = document.getElementById("neu2");
+const neu3 = document.getElementById("neu3");
+const neu4 = document.getElementById("neu4");
+const neu5 = document.getElementById("neu5");
+const neu6 = document.getElementById("neu6");
+
+
 if (!('theme' in localStorage))  {
   applyTheme(2022);
 } else {
   applyTheme(localStorage.theme);
   setSlider(localStorage.theme);
 }
+

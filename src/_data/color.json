@@ -172,7 +172,7 @@
       "saturation": "83%",
       "lightness": "63%",
       "hsl":"hsl(42 83% 63%)",
-      "contrastDark":"#2E2E2E",
+      "contrastDark":"#FDFDFD",
       "contrastPantone":"#2E2E2E",
       "contrastLight":"#2E2E2E"
     },
