@@ -295,18 +295,79 @@ async function applyTheme(year){
     root.style.setProperty('--onLightone',coloroftheyear[1].contrastLight);
 
   }
-  pan1.textContent = RGBToHex(getComputedStyle(pan1).backgroundColor);
-  pan2.textContent = RGBToHex(getComputedStyle(pan2).backgroundColor);
-  pan3.textContent = RGBToHex(getComputedStyle(pan3).backgroundColor);
-  pan4.textContent = RGBToHex(getComputedStyle(pan4).backgroundColor);
-  pan5.textContent = RGBToHex(getComputedStyle(pan5).backgroundColor);
-  pan6.textContent = RGBToHex(getComputedStyle(pan6).backgroundColor);
-  neu1.textContent = RGBToHex(getComputedStyle(neu1).backgroundColor);
-  neu2.textContent = RGBToHex(getComputedStyle(neu2).backgroundColor);
-  neu3.textContent = RGBToHex(getComputedStyle(neu3).backgroundColor);
-  neu4.textContent = RGBToHex(getComputedStyle(neu4).backgroundColor);
-  neu5.textContent = RGBToHex(getComputedStyle(neu5).backgroundColor);
-  neu6.textContent = RGBToHex(getComputedStyle(neu6).backgroundColor);
+  pan1.addEventListener("mouseenter", event => {
+    pan1.textContent = RGBToHex(getComputedStyle(pan1).backgroundColor);
+  });
+  pan1.addEventListener("mouseleave",event => {
+    pan1.textContent = "pantoned1";
+  });
+  pan2.addEventListener("mouseenter", event => {
+    pan2.textContent = RGBToHex(getComputedStyle(pan2).backgroundColor);
+  });
+  pan2.addEventListener("mouseleave",event => {
+    pan2.textContent = "pantoned2";
+  });
+  pan3.addEventListener("mouseenter", event => {
+    pan3.textContent = RGBToHex(getComputedStyle(pan3).backgroundColor);
+  });
+  pan3.addEventListener("mouseleave",event => {
+    pan3.textContent = "pantoned3";
+  });
+  pan4.addEventListener("mouseenter", event => {
+    pan4.textContent = RGBToHex(getComputedStyle(pan4).backgroundColor);
+  });
+  pan4.addEventListener("mouseleave",event => {
+    pan4.textContent = "pantoned1";
+  });
+  pan5.addEventListener("mouseenter", event => {
+    pan5.textContent = RGBToHex(getComputedStyle(pan5).backgroundColor);
+  });
+  pan5.addEventListener("mouseleave",event => {
+    pan5.textContent = "pantoned1";
+  });
+  pan6.addEventListener("mouseenter", event => {
+    pan6.textContent = RGBToHex(getComputedStyle(pan6).backgroundColor);
+  });
+  pan6.addEventListener("mouseleave",event => {
+    pan6.textContent = "pantoned1";
+  });
+
+  neu1.addEventListener("mouseenter", event => {
+    neu1.textContent = RGBToHex(getComputedStyle(neu1).backgroundColor);
+  });
+  neu1.addEventListener("mouseleave",event => {
+    neu1.textContent = "neutoned1";
+  });
+  neu2.addEventListener("mouseenter", event => {
+    neu2.textContent = RGBToHex(getComputedStyle(neu2).backgroundColor);
+  });
+  neu2.addEventListener("mouseleave",event => {
+    neu2.textContent = "neutoned2";
+  });
+  neu3.addEventListener("mouseenter", event => {
+    neu3.textContent = RGBToHex(getComputedStyle(neu3).backgroundColor);
+  });
+  neu3.addEventListener("mouseleave",event => {
+    neu3.textContent = "neutoned3";
+  });
+  neu4.addEventListener("mouseenter", event => {
+    neu4.textContent = RGBToHex(getComputedStyle(neu4).backgroundColor);
+  });
+  neu4.addEventListener("mouseleave",event => {
+    neu4.textContent = "neutoned1";
+  });
+  neu5.addEventListener("mouseenter", event => {
+    neu5.textContent = RGBToHex(getComputedStyle(neu5).backgroundColor);
+  });
+  neu5.addEventListener("mouseleave",event => {
+    neu5.textContent = "neutoned1";
+  });
+  neu6.addEventListener("mouseenter", event => {
+    neu6.textContent = RGBToHex(getComputedStyle(neu6).backgroundColor);
+  });
+  neu6.addEventListener("mouseleave",event => {
+    neu6.textContent = "neutoned1";
+  });
 }
 
 function handleThemingMobile(but){
@@ -370,6 +431,18 @@ const neu4 = document.getElementById("neu4");
 const neu5 = document.getElementById("neu5");
 const neu6 = document.getElementById("neu6");
 
+pan1.textContent = "pantoned1";
+pan2.textContent = "pantoned2";
+pan3.textContent = "pantoned3";
+pan4.textContent = "pantoned4";
+pan5.textContent = "pantoned5";
+pan6.textContent = "pantoned6";
+neu1.textContent = "neutral1";
+neu2.textContent = "neutral2";
+neu3.textContent = "neutral3";
+neu4.textContent = "neutral4";
+neu5.textContent = "neutral5";
+neu6.textContent = "neutral6";
 
 if (!('theme' in localStorage))  {
   applyTheme(2022);
