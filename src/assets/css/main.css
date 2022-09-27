@@ -8,6 +8,10 @@
   }
 }
 
+/* *{
+  border: 1px red solid;
+} */
+
 :root{
   --color-darktone: hsl(0 0% 15%);
   --color-pantone: hsl(0 0% 40%);
@@ -184,7 +188,7 @@ img{
   @apply h-[40vh];
 }
 .full-width{
-  @apply w-[99vw] relative left-1/2 ml-[-50vw] mr-auto;
+  @apply w-[95vw] relative left-1/2 ml-[-50vw] mr-auto;
 }
 .logo{
   @apply w-fit h-fit float-left;
