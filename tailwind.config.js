@@ -3,21 +3,18 @@ module.exports = {
   content: ["./src/**/*.{html,njk}"],
   theme: {
     colors:{
-      'pantone': 'var(--color-pantone)',
-      'darktone': 'var(--color-darktone)',
-      'lightone': 'var(--color-lightone)',
-      'lghtgrey1': 'var(--color-lghtgrey1)',
-      'lghtgrey2': 'var(--color-lghtgrey2)',
-      'lghtgrey3': 'var(--color-lghtgrey3)',
-      'darkgrey1': 'var(--color-darkgrey1)',
-      'darkgrey2': 'var(--color-darkgrey2)',
-      'darkgrey3': 'var(--color-darkgrey3)',
-      'whitegrey1': 'var(--color-whitegrey1)',
-      'whitegrey2': 'var(--color-whitegrey2)',
-      'whitegrey3': 'var(--color-whitegrey3)',
-      'onPantone': 'var(--onPantone)',
-      'onDarktone': 'var(--onDarktone)',
-      'onLightone': 'var(--onLightone)'
+      'pantoned1':'var(--pantoned1)',
+      'pantoned2':'var(--pantoned2)',
+      'pantoned3':'var(--pantoned3)',
+      'pantoned4':'var(--pantoned4)',
+      'pantoned5':'var(--pantoned5)',
+      'pantoned6':'var(--pantoned6)',
+      'neutral1':'var(--neutral1)',
+      'neutral2':'var(--neutral2)',
+      'neutral3':'var(--neutral3)',
+      'neutral4':'var(--neutral4)',
+      'neutral5':'var(--neutral5)',
+      'neutral6':'var(--neutral6)'
     },
     extend: {
       fontSize: {

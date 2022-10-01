@@ -2,12 +2,26 @@
 
 <section id="logos">
     <h2>Logotype / Logomark</h2>
-    <div class="blocText text-center">
-        <p>Vous pouvez générer plus de 200 logos différents en ajustant le thème Pantone.</p>
-        <p>Cliquez sur un logo pour le télécharger en SVG.</p>
+    <h3>Origines - explications</h3>
+
+    <p>Le logotype est simplement "huitquatre" avec Libre Franklin en 900.</p>
+    <div class="max-w-xl mx-auto">
+        <span class="font-black fittext">huitquatre</span>
     </div>
+
+    <p>La logomark fait apparaitre le "h" et le "4" de <span class="font-black">huitquatre</span> dans l'espace négatif.</p>
+    <div class="flex flex-col sm:flex-row">
+        {% svg 'logo_themed_light', 'id="logomark_demo1" class="m-16 max-w-md min-w-[75px] mx-auto"' %}
+        {% svg 'logo_themed_light', 'id="logomark_demo2" class="m-16 max-w-md min-w-[75px] mx-auto"' %}
+        {% svg 'logo_themed_light', 'id="logomark_demo3" class="m-16 max-w-md min-w-[75px] mx-auto"' %}
+    </div>
+
     
-    <div class="flex flex-col justify-center items-center">    
+    
+    
+
+    
+    {# <div class="flex flex-col justify-center items-center">    
         <button onclick='downloadSVG(this.id)' id="themedLight" class="border-0 rounded-none full-width bg-lghtgrey1 dark:hidden flex justify-center">
             {% svg 'logo_themed_light', 'id="themed--light" class="m-16 max-w-md min-w-[75px]"' %}
         </button>
@@ -35,7 +49,7 @@
         <button onclick='downloadSVG(this.id)' id="BW-BG-noir-large" class="border-0 rounded-none full-width bg-darkgrey1 hidden dark:flex justify-center">
             {% svg 'logo_large_black', 'id="large_black" class="m-16 max-w-4xl min-w-[150px]"' %}
         </button>
-    </div>
+    </div> #}
 
     <h3>Placement du logo : clearspace - espace libre</h3>
     <div class="">

@@ -13,38 +13,30 @@
 } */
 
 :root{
-  --color-darktone: hsl(0 0% 15%);
-  --color-pantone: hsl(0 0% 40%);
-  --color-lightone: hsl(0 0% 60%);
+  --pantoned1: #FCFCFF;
+  --pantoned2: #F1F0F8;
+  --pantoned3: #9996DF;
+  --pantoned4: #6868AC;
+  --pantoned5: #252432;
+  --pantoned6: #040213;
 
-  --color-lghtgrey1: hsl(0 0% 97%);
-  --color-lghtgrey2: hsl(0 0% 75%);
-  --color-lghtgrey3: hsl(0 0% 60%);
-
-  --color-whitegrey1: hsl(0 0% 97%);
-  --color-whitegrey2: hsl(0 0% 83%);
-  --color-whitegrey3: hsl(0 0% 70%);
-
-  --color-darkgrey1: hsl(0 0% 15%);
-  --color-darkgrey2: hsl(0 0% 35%);
-  --color-darkgrey3: hsl(0 0% 55%);
+  --neutral6: #171717;
+  --neutral5: #414141;
+  --neutral4: #6a6a6a;
+  --neutral3: #979797;
+  --neutral2: #c6c6c6;
+  --neutral1:  #f8f8f8;
 }
 
-#toBeColorized .logotext{
-  @apply fill-[var(--color-darktone)] dark:fill-[var(--color-lghtgrey1)];
-}
-#toBeColorized .rect--big{
-  @apply fill-[var(--color-pantone)] dark:fill-[var(--color-lghtgrey2)];
-}
-#toBeColorized .rect--top{
-  @apply fill-[var(--color-lightone)] dark:fill-[var(--color-lghtgrey3)];
-}
-#toBeColorized .rect--bot{
-  @apply fill-[var(--color-darktone)] dark:fill-[var(--color-lghtgrey1)];
-}
-#toBeColorized{
-  @apply bg-clip-content bg-lghtgrey1 dark:bg-darktone;
-}
+#logomark_demo1 .logotype {fill:none;}
+
+#logomark_demo2 .util {stroke:#979797; stroke-width: 5px;}
+#logomark_demo2 .logotype {fill:none;}
+#logomark_demo2 .logomark {stroke:#979797; stroke-width: 5px;}
+
+#logomark_demo3 .logomark {fill:none;}
+#logomark_demo3 .util {fill:#000;}
+#logomark_demo3 .logotype {fill:none;}
 
 /* UTOPIA FONT SCALE */
 
@@ -134,7 +126,7 @@ h2{
   @apply text-fluid-4 font-thin uppercase leading-tight pt-16 pb-8;
 }
 h3{
-  @apply text-fluid-3 font-normal leading-snug underline decoration-8 decoration-lightone dark:decoration-pantone pt-8 pb-4;
+  @apply text-fluid-3 font-normal leading-snug underline decoration-8 decoration-pantoned4 dark:decoration-pantoned3 pt-8 pb-4;
 }
 h4{
   @apply text-fluid-2 font-thin uppercase leading-none pt-6 pb-4;
@@ -172,7 +164,7 @@ hr + h5 {
 }
 
 button{
-  @apply border-2 dark:border-lghtgrey1 border-darktone rounded-md text-darktone dark:text-lghtgrey1;
+  @apply border-2 dark:border-pantoned1 border-pantoned6 rounded-md text-pantoned6 dark:text-pantoned1;
 }
 section{
   @apply pt-24 lg:pt-32;
@@ -203,7 +195,7 @@ img{
 }
 
 #wrapper{
-  @apply bg-lghtgrey1 dark:bg-darktone text-darktone dark:text-lghtgrey1 px-4 sm:px-8 md:px-16;
+  @apply bg-pantoned1 dark:bg-pantoned6 text-pantoned6 dark:text-pantoned1 px-4 sm:px-8 md:px-16;
 }
 
 #pantone-color-year::-webkit-slider-thumb{
@@ -212,14 +204,14 @@ img{
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: var(--color-pantone);
+  background: var(--pantoned4);
   cursor: pointer;
 }
 
 #pantone-color-year::-moz-range-thumb {
   width: 15px;
   height: 15px;
-  background: var(--color-pantone);
+  background: var(--pantoned4);
   cursor: pointer;
 }
 
