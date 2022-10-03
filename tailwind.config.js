@@ -14,7 +14,8 @@ module.exports = {
       'neutral3':'var(--neutral3)',
       'neutral4':'var(--neutral4)',
       'neutral5':'var(--neutral5)',
-      'neutral6':'var(--neutral6)'
+      'neutral6':'var(--neutral6)',
+      'transparent': 'transparent',
     },
     extend: {
       fontSize: {

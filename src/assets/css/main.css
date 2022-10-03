@@ -28,15 +28,87 @@
   --neutral1:  #f8f8f8;
 }
 
-#logomark_demo1 .logotype {fill:none;}
+#logomark_demo1 .logotype {
+  @apply fill-transparent;
+}
+#logomark_demo1 .logomark {
+  @apply fill-neutral6 dark:fill-neutral1;
+}
 
-#logomark_demo2 .util {stroke:#979797; stroke-width: 5px;}
-#logomark_demo2 .logotype {fill:none;}
-#logomark_demo2 .logomark {stroke:#979797; stroke-width: 5px;}
+#logomark_demo2 .util {
+  @apply stroke-neutral2 dark:stroke-neutral4 stroke-2;
+}
+#logomark_demo2 .logotype {
+  @apply fill-transparent;
+}
+#logomark_demo2 .logomark {
+  @apply stroke-neutral2 dark:stroke-neutral4 stroke-2
+}
+#logomark_demo2 .logomark {
+  @apply fill-neutral6 dark:fill-neutral1;
+}
 
-#logomark_demo3 .logomark {fill:none;}
-#logomark_demo3 .util {fill:#000;}
-#logomark_demo3 .logotype {fill:none;}
+#logomark_demo3 .logomark {
+  @apply fill-transparent
+}
+#logomark_demo3 .util {
+  @apply fill-neutral6 dark:fill-neutral1;
+}
+#logomark_demo3 .logotype {
+  @apply fill-transparent
+}
+
+#logo_normal_demo .logomark{
+  @apply fill-neutral6 dark:fill-neutral1;
+}
+#logo_normal_demo .logotype{
+  @apply fill-neutral6 dark:fill-neutral1;
+}
+
+#logo_large_demo .logomark{
+  @apply fill-neutral6 dark:fill-neutral1;
+}
+#logo_large_demo .logotype{
+  @apply fill-neutral6 dark:fill-neutral1;
+}
+
+#logo_normal_tint .topright{
+  @apply fill-neutral4 dark:fill-neutral3;
+}
+#logo_normal_tint .topleft{
+  @apply fill-neutral5 dark:fill-neutral2;
+}
+#logo_normal_tint .bottomright{
+  @apply fill-neutral5 dark:fill-neutral2;
+}
+#logo_normal_tint .bottomleft{
+  @apply fill-neutral6 dark:fill-neutral1;
+}
+#logo_normal_tint .logotype{
+  @apply fill-neutral6 dark:fill-neutral1;
+}
+#logo_normal_tint {
+  @apply bg-clip-content bg-pantoned1 dark:bg-pantoned6;
+}
+
+#logo_large_tint .topright{
+  @apply fill-neutral4 dark:fill-neutral3;
+}
+#logo_large_tint .topleft{
+  @apply fill-neutral5 dark:fill-neutral2;
+}
+#logo_large_tint .bottomright{
+  @apply fill-neutral5 dark:fill-neutral2;
+}
+#logo_large_tint .bottomleft{
+  @apply fill-neutral6 dark:fill-neutral1;
+}
+#logo_large_tint .logotype{
+  @apply fill-neutral6 dark:fill-neutral1;
+}
+#logo_large_tint {
+  @apply bg-clip-content bg-pantoned1 dark:bg-pantoned6;
+}
 
 /* UTOPIA FONT SCALE */
 
@@ -117,7 +189,6 @@
 
 body{
   font-family: 'Libre Franklin', sans-serif;
-
 }
 h1{
   @apply font-black leading-none w-3/4 mx-auto pb-16;
@@ -136,7 +207,7 @@ h5{
 }
 
 p{
-  @apply text-fluid-0 font-light max-w-[40ch] lg:max-w-[50ch] lg:leading-relaxed lg:tracking-wide mx-auto;
+  @apply text-fluid-0 font-light max-w-[40ch] lg:max-w-[50ch] lg:leading-relaxed lg:tracking-wide;
 }
 
 code{

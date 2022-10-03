@@ -21,6 +21,7 @@ function toggleDarkMode(){
   document.body.classList.toggle("dark");
   sun.classList.toggle("hidden");
   moon.classList.toggle("hidden");
+  thematisation();
 }
 
 /* Handle the theming pantone color of the year */
@@ -54,6 +55,63 @@ async function applyTheme(year){
   //Recalculate the contrast
   displayContrast();
 }
+
+//Thematisation des logos
+async function thematisation() {
+  //Get the data from my json file
+  let resp = await fetch('/pantone-color-of-the-year.json');
+  let data = await resp.json();
+  //Grab the logos
+  const cont = document.getElementById("logoThemise");
+  const logos = cont.querySelectorAll("svg");
+  //Check if this is dark mode
+  const dark = document.body.classList.contains('dark');
+  //Change the colors
+  for(let i=0;i<logos.length;i++){
+    logos[i].querySelectorAll(".logotype").forEach(letter => {
+      if(dark){
+        letter.style = `fill:${data[i].pantonedHex[5]};`;
+      }
+      else{
+        letter.style = `fill:${data[i].pantonedHex[0]};`;
+      }
+    });
+    logos[i].querySelectorAll(".bottomleft").forEach(letter => {
+      if(dark){
+        letter.style = `fill:${data[i].pantonedHex[5]};`;
+      }
+      else{
+        letter.style = `fill:${data[i].pantonedHex[0]};`;
+      }
+    });
+    logos[i].querySelectorAll(".bottomright").forEach(letter => {
+      if(dark){
+        letter.style = `fill:${data[i].pantonedHex[4]};`;
+      }
+      else{
+        letter.style = `fill:${data[i].pantonedHex[1]};`;
+      }
+    });
+    logos[i].querySelectorAll(".topleft").forEach(letter => {
+      if(dark){
+        letter.style = `fill:${data[i].pantonedHex[4]};`;
+      }
+      else{
+        letter.style = `fill:${data[i].pantonedHex[1]};`;
+      }
+    });
+    logos[i].querySelectorAll(".topright").forEach(letter => {
+      if(dark){
+        letter.style = `fill:${data[i].pantonedHex[3]};`;
+      }
+      else{
+        letter.style = `fill:${data[i].pantonedHex[2]};`;
+      }
+    });
+  }
+}
+thematisation();
+
 
 function handleThemingMobile(but){
   //Get the input/output

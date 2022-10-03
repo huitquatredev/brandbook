@@ -2,21 +2,117 @@
 
 <section id="logos">
     <h2>Logotype / Logomark</h2>
+
     <h3>Origines - explications</h3>
 
     <p>Le logotype est simplement "huitquatre" avec Libre Franklin en 900.</p>
-    <div class="max-w-xl mx-auto">
+    <div class="max-w-md mx-auto">
         <span class="font-black fittext">huitquatre</span>
     </div>
 
     <p>La logomark fait apparaitre le "h" et le "4" de <span class="font-black">huitquatre</span> dans l'espace négatif.</p>
-    <div class="flex flex-col sm:flex-row">
-        {% svg 'logo_themed_light', 'id="logomark_demo1" class="m-16 max-w-md min-w-[75px] mx-auto"' %}
-        {% svg 'logo_themed_light', 'id="logomark_demo2" class="m-16 max-w-md min-w-[75px] mx-auto"' %}
-        {% svg 'logo_themed_light', 'id="logomark_demo3" class="m-16 max-w-md min-w-[75px] mx-auto"' %}
+    <div class="flex flex-col-reverse sm:flex-row-reverse items-center mt-16">
+        {% svg 'logo_themed_light', 'id="logomark_demo1" class="max-w-sm min-w-[75px] mx-auto"' %}
+        {% svg 'logo_themed_light', 'id="logomark_demo2" class="mx-auto sm:ml-8 max-w-sm min-w-[75px]"' %}
+        {% svg 'logo_themed_light', 'id="logomark_demo3" class="max-w-sm min-w-[75px] mx-auto"' %}
     </div>
 
+    <p>Le logotype peut être placé en dessous ou à côté de la logomark (version large).</p>
+    <div class="flex flex-col space-y-16 my-8">
+        {% svg 'logo_themed_light', 'id="logo_normal_demo" class="max-w-xs min-w-[75px] mx-auto"' %}
+        {% svg 'logo_large_themed_light', 'id="logo_large_demo" class="max-w-xl min-w-[75px] mx-auto"' %}
+    </div>
+
+    <p>Les élèments de la logomark doivent être tintés de manière à créer un gradient où le contraste est maximal en bas à gauche et minimal en haut à droite. Le logotype est toujours affiché avec le contraste maximum.</p>
+    <div class="flex flex-col space-y-16 my-8">
+        {% svg 'logo_themed_light', 'id="logo_normal_tint" class="max-w-xs min-w-[75px] mx-auto"' %}
+        {% svg 'logo_large_themed_light', 'id="logo_large_tint" class="max-w-xl min-w-[75px] mx-auto"' %}
+    </div>
+
+    <h3>Placement du logo : clearspace - espace libre</h3>
+    <div class="">
+        <p class="text-center mb-16">Passez la souris / cliquez sur le logo</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="leading-none border border-neutral6 dark:border-neutral1 space-y-2">
+                <div class="logo hover:bg-pantoned3 hover:dark:bg-pantoned4">
+                    {% svg 'logo_themed_light', 'id="logo_normal_tint" class="w-[30vw] max-w-xl logo-normal-margin"' %}
+                </div>
+                <p class="text-fluid--2 max-w-none">Cupcake ipsum dolor sit amet croissant marzipan liquorice. Lemon drops cake chupa chups macaroon cotton candy I love sweet roll. Cake chupa chups I love sweet roll jelly cake cake chocolate bar caramels.</p>
+                <p class="text-fluid--2 max-w-none">I love gummi bears marzipan macaroon donut sweet roll oat cake lollipop. Icing cheesecake marzipan bear claw I love. Lemon drops sweet roll tart caramels macaroon candy biscuit sweet roll. Pie I love pie sweet candy canes I love I love.</p>
+                <p class="text-fluid--2 max-w-none">I love apple pie I love wafer dessert dessert tiramisu liquorice. Jelly gingerbread sugar plum I love lemon drops halvah cotton candy dessert icing. Halvah sweet roll pudding liquorice jelly beans.</p>
+                <p class="text-fluid--2 max-w-none">Cupcake ipsum dolor sit amet croissant marzipan liquorice. Lemon drops cake chupa chups macaroon cotton candy I love sweet roll. Cake chupa chups I love sweet roll jelly cake cake chocolate bar caramels.</p>
+                <p class="text-fluid--2 max-w-none">I love gummi bears marzipan macaroon donut sweet roll oat cake lollipop. Icing cheesecake marzipan bear claw I love. Lemon drops sweet roll tart caramels macaroon candy biscuit sweet roll. Pie I love pie sweet candy canes I love I love.</p>
+                <p class="text-fluid--2 max-w-none">I love apple pie I love wafer dessert dessert tiramisu liquorice. Jelly gingerbread sugar plum I love lemon drops halvah cotton candy dessert icing. Halvah sweet roll pudding liquorice jelly beans.</p>
+            </div>
+
+            <div class="blocText">
+                <p>On doit respecter un espacement d'au moins la petite largeur d'un rectangle du logo</p>
+                <code>&lt;div class="logo"&gt;<br>&nbsp;&nbsp;&lt;img class="w-64 logo-normal-margin"/&gt;<br>&lt;/div&gt;</code>
+                <code>&lt;div class="logo"&gt;<br>&nbsp;&nbsp;&lt;img class="w-64 logo-large-margin"/&gt;<br>&lt;/div&gt;</code>
+            </div>
+
+        </div>
+
+        <div class="leading-none border border-neutral6 dark:border-neutral1 space-y-2 mt-16 ">
+            <div class="logo hover:bg-pantoned3 hover:dark:bg-pantoned4">
+                {% svg 'logo_large_themed_light', 'id="logo_normal_tint" class="w-[60vw] max-w-xl logo-large-margin"' %}
+            </div>
+            <p class="text-fluid--2 max-w-none">Cupcake ipsum dolor sit amet croissant marzipan liquorice. Lemon drops cake chupa chups macaroon cotton candy I love sweet roll. Cake chupa chups I love sweet roll jelly cake cake chocolate bar caramels.</p>
+            <p class="text-fluid--2 max-w-none">I love gummi bears marzipan macaroon donut sweet roll oat cake lollipop. Icing cheesecake marzipan bear claw I love. Lemon drops sweet roll tart caramels macaroon candy biscuit sweet roll. Pie I love pie sweet candy canes I love I love.</p>
+            <p class="text-fluid--2 max-w-none">I love apple pie I love wafer dessert dessert tiramisu liquorice. Jelly gingerbread sugar plum I love lemon drops halvah cotton candy dessert icing. Halvah sweet roll pudding liquorice jelly beans.</p>
+            <p class="text-fluid--2 max-w-none">Cupcake ipsum dolor sit amet croissant marzipan liquorice. Lemon drops cake chupa chups macaroon cotton candy I love sweet roll. Cake chupa chups I love sweet roll jelly cake cake chocolate bar caramels.</p>
+            <p class="text-fluid--2 max-w-none">I love gummi bears marzipan macaroon donut sweet roll oat cake lollipop. Icing cheesecake marzipan bear claw I love. Lemon drops sweet roll tart caramels macaroon candy biscuit sweet roll. Pie I love pie sweet candy canes I love I love.</p>
+            <p class="text-fluid--2 max-w-none">I love apple pie I love wafer dessert dessert tiramisu liquorice. Jelly gingerbread sugar plum I love lemon drops halvah cotton candy dessert icing. Halvah sweet roll pudding liquorice jelly beans.</p>
+        </div>
     
+    </div>
+
+    <h3>Téléchargement</h3>
+
+    <div class="blocText mb-16">
+        <h4>version web en SVG, manipulable via CSS</h4>
+        <p>Cliquez sur l'image que vous souhaitez télécharger.</p>
+    </div>
+    <div class="space-y-16">
+        <button onclick='downloadSVG(this.id)' id="web_normal" class="border-0 rounded-none w-48 bg-lghtgrey1 dark:hidden flex justify-center">
+            {% svg 'logo_themed_light', 'id="logo_normal"' %}
+        </button>
+        <button onclick='downloadSVG(this.id)' id="web_large" class="border-0 rounded-none w-96 bg-lghtgrey1 dark:hidden flex justify-center">
+            {% svg 'logo_large_themed_light', 'id="logo_large"' %}
+        </button>
+        <code>
+            #logo_normal ou #logo_large<br>
+            // toujours utiliser l'ID du logo. Le style est appliqué globalement par défaut.<br>
+            #id .logotype<br>
+            // style du texte (logotype)<br>
+            #id .logomark<br>
+            // style du logo (logomark)<br>
+            #id .topright/.topleft/.bottomright/.bottomleft<br>
+            // style de chaque rectangle du logo<br>
+            #id .util<br>
+            // style du h4<br>
+            #id .h<br>
+            // style du h<br>
+            #id .quatre<br>
+            // style du 4<br>
+        </code>
+    </div>
+    <div class="blocText mb-16">
+        <h4>version thémisée, à utiliser tel quel</h4>
+        <p>Cliquez sur l'image que vous souhaitez télécharger.</p>
+    </div>
+    <div id="logoThemise" class="flex flex-row flex-wrap gap-8 justify-center">
+        {% for color in colorsAPI %}
+            <div class="flex flex-col items-center">
+                <span class="font-light text-fluid--2">{{color.name}}</span>
+                <span class="font-light text-fluid--2">{{color.year}}</span>
+                <button id={{color.year}} class="border-0" onclick="downloadSVG(this.id)">
+                    {% svg 'logo_themed_light', 'class="w-32"' %}
+                </button>
+            </div>
+        {% endfor %}
+    </div>
     
     
 
@@ -50,44 +146,5 @@
             {% svg 'logo_large_black', 'id="large_black" class="m-16 max-w-4xl min-w-[150px]"' %}
         </button>
     </div> #}
-
-    <h3>Placement du logo : clearspace - espace libre</h3>
-    <div class="">
-        <p class="text-center mb-16">Passez la souris / cliquez sur le logo</p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="leading-none border border-pantone space-y-2">
-                <div class="logo hover:bg-pantone hover:dark:bg-darkgrey3">
-                    {% svg 'logo_themed_light', 'id="toBeColorized" class="w-[30vw] max-w-xl logo-normal-margin"' %}
-                </div>
-                <p class="text-fluid--2 max-w-none">Cupcake ipsum dolor sit amet croissant marzipan liquorice. Lemon drops cake chupa chups macaroon cotton candy I love sweet roll. Cake chupa chups I love sweet roll jelly cake cake chocolate bar caramels.</p>
-                <p class="text-fluid--2 max-w-none">I love gummi bears marzipan macaroon donut sweet roll oat cake lollipop. Icing cheesecake marzipan bear claw I love. Lemon drops sweet roll tart caramels macaroon candy biscuit sweet roll. Pie I love pie sweet candy canes I love I love.</p>
-                <p class="text-fluid--2 max-w-none">I love apple pie I love wafer dessert dessert tiramisu liquorice. Jelly gingerbread sugar plum I love lemon drops halvah cotton candy dessert icing. Halvah sweet roll pudding liquorice jelly beans.</p>
-                <p class="text-fluid--2 max-w-none">Cupcake ipsum dolor sit amet croissant marzipan liquorice. Lemon drops cake chupa chups macaroon cotton candy I love sweet roll. Cake chupa chups I love sweet roll jelly cake cake chocolate bar caramels.</p>
-                <p class="text-fluid--2 max-w-none">I love gummi bears marzipan macaroon donut sweet roll oat cake lollipop. Icing cheesecake marzipan bear claw I love. Lemon drops sweet roll tart caramels macaroon candy biscuit sweet roll. Pie I love pie sweet candy canes I love I love.</p>
-                <p class="text-fluid--2 max-w-none">I love apple pie I love wafer dessert dessert tiramisu liquorice. Jelly gingerbread sugar plum I love lemon drops halvah cotton candy dessert icing. Halvah sweet roll pudding liquorice jelly beans.</p>
-            </div>
-
-            <div class="blocText">
-                <p>On doit respecter un espacement d'au moins la petite largeur d'un rectangle du logo</p>
-                <code>&lt;div class="logo"&gt;<br>&nbsp;&nbsp;&lt;img class="w-64 logo-normal-margin"/&gt;<br>&lt;/div&gt;</code>
-                <code>&lt;div class="logo"&gt;<br>&nbsp;&nbsp;&lt;img class="w-64 logo-large-margin"/&gt;<br>&lt;/div&gt;</code>
-            </div>
-
-        </div>
-
-        <div class="leading-none border border-pantone space-y-2 mt-16 ">
-            <div class="logo hover:bg-pantone hover:dark:bg-darkgrey3">
-                {% svg 'logo_large_themed_light', 'id="toBeColorized" class="w-[60vw] max-w-xl logo-large-margin"' %}
-            </div>
-            <p class="text-fluid--2 max-w-none">Cupcake ipsum dolor sit amet croissant marzipan liquorice. Lemon drops cake chupa chups macaroon cotton candy I love sweet roll. Cake chupa chups I love sweet roll jelly cake cake chocolate bar caramels.</p>
-            <p class="text-fluid--2 max-w-none">I love gummi bears marzipan macaroon donut sweet roll oat cake lollipop. Icing cheesecake marzipan bear claw I love. Lemon drops sweet roll tart caramels macaroon candy biscuit sweet roll. Pie I love pie sweet candy canes I love I love.</p>
-            <p class="text-fluid--2 max-w-none">I love apple pie I love wafer dessert dessert tiramisu liquorice. Jelly gingerbread sugar plum I love lemon drops halvah cotton candy dessert icing. Halvah sweet roll pudding liquorice jelly beans.</p>
-            <p class="text-fluid--2 max-w-none">Cupcake ipsum dolor sit amet croissant marzipan liquorice. Lemon drops cake chupa chups macaroon cotton candy I love sweet roll. Cake chupa chups I love sweet roll jelly cake cake chocolate bar caramels.</p>
-            <p class="text-fluid--2 max-w-none">I love gummi bears marzipan macaroon donut sweet roll oat cake lollipop. Icing cheesecake marzipan bear claw I love. Lemon drops sweet roll tart caramels macaroon candy biscuit sweet roll. Pie I love pie sweet candy canes I love I love.</p>
-            <p class="text-fluid--2 max-w-none">I love apple pie I love wafer dessert dessert tiramisu liquorice. Jelly gingerbread sugar plum I love lemon drops halvah cotton candy dessert icing. Halvah sweet roll pudding liquorice jelly beans.</p>
-        </div>
-    
-    </div>
     
 </section>
