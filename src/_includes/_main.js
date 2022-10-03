@@ -45,12 +45,23 @@ async function applyTheme(year){
   });
   //Show the year and the color name selected under the range slider
   output.value = `${year} ${coloroftheyear[0].name}`;
-  root.style.setProperty('--pantoned1',coloroftheyear[0].pantonedHex[5]);
-  root.style.setProperty('--pantoned2',coloroftheyear[0].pantonedHex[4]);
-  root.style.setProperty('--pantoned3',coloroftheyear[0].pantonedHex[3]);
-  root.style.setProperty('--pantoned4',coloroftheyear[0].pantonedHex[2]);
-  root.style.setProperty('--pantoned5',coloroftheyear[0].pantonedHex[1]);
-  root.style.setProperty('--pantoned6',coloroftheyear[0].pantonedHex[0]);
+  //Change the css var colors
+  if(coloroftheyear.length === 1){
+    root.style.setProperty('--pantoned1',coloroftheyear[0].pantonedHex[5]);
+    root.style.setProperty('--pantoned2',coloroftheyear[0].pantonedHex[4]);
+    root.style.setProperty('--pantoned3',coloroftheyear[0].pantonedHex[3]);
+    root.style.setProperty('--pantoned4',coloroftheyear[0].pantonedHex[2]);
+    root.style.setProperty('--pantoned5',coloroftheyear[0].pantonedHex[1]);
+    root.style.setProperty('--pantoned6',coloroftheyear[0].pantonedHex[0]);
+  }
+  else{
+    root.style.setProperty('--pantoned1',coloroftheyear[1].pantonedHex[5]);
+    root.style.setProperty('--pantoned2',coloroftheyear[1].pantonedHex[4]);
+    root.style.setProperty('--pantoned3',coloroftheyear[1].pantonedHex[3]);
+    root.style.setProperty('--pantoned4',coloroftheyear[0].pantonedHex[2]);
+    root.style.setProperty('--pantoned5',coloroftheyear[0].pantonedHex[1]);
+    root.style.setProperty('--pantoned6',coloroftheyear[0].pantonedHex[0]);
+  }
 
   //Recalculate the contrast
   displayContrast();
